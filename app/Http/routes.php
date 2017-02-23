@@ -20,4 +20,11 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+Route::group(['prefix' => 'admin'],function(){
+	Route::group(['prefix' => 'cate'],function(){
+		Route::get('add',['as' => 'admin.cate.getAdd','uses' =>'CateController@getAdd']);
+		Route::post('add',['as' => 'admin.cate.postAdd','uses' =>'CateController@postAdd']);
+	});
+});
+
 
