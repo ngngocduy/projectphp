@@ -1,5 +1,7 @@
  @extends('user.master')
+ @section('description',"Đây là trang chủ")
 @section('content')
+
  <!-- Featured Product-->
   <section id="featured" class="row mt40">
     <div class="container">

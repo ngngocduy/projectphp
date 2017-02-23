@@ -20,11 +20,4 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('khoa-hoc',function(){
-	return "Lập trình";
-});
-
-Route::get('test',function(){
-	return view('user.pages.home');
-});
 
