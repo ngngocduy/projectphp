@@ -18,9 +18,9 @@
     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
         <div class="form-group">
             <label>Category Parent</label>
-            <select class="form-control">
+            <select class="form-control" name="sltParent">
                 <option value="0">Please Choose Category</option>
-                <option value="">Tin Tức</option>
+                <?php cate_parent($parent) ?>
             </select>
         </div>
         <div class="form-group">
@@ -33,11 +33,11 @@
         </div>
         <div class="form-group">
             <label>Category Keywords</label>
-            <input class="form-control" name="txtOrder" placeholder="Please Enter Category Keywords" />
+            <input class="form-control" name="txtKeywords" placeholder="Please Enter Category Keywords" />
         </div>
         <div class="form-group">
             <label>Category Description</label>
-            <textarea class="form-control" rows="3"></textarea>
+            <textarea class="form-control" rows="3" name="txtDescription"></textarea>
         </div>
         <div class="form-group">
             <label>Category Status</label>

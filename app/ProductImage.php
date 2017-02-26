@@ -8,7 +8,7 @@ class ProductImage extends Model {
 
 	protected $filltable = ['image','product_id'];
 
-	public $timestamp = false;
+	public $timestamps = false;
 
 	public function product(){
 		return $this->belongTo('App\Product');

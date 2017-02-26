@@ -135,7 +135,14 @@
                         </h1>
                     </div>
                     <!-- /.col-lg-12 -->
-                    
+                    <div class="col-lg-12">
+                        @if(Session::has('flag_message'))
+                            <div class="alert alert-danger">
+                                {!! Session::get('flag_message') !!}
+                            </div>
+                        @endif
+                    </div>
+
                     @yield('content')
 
 
