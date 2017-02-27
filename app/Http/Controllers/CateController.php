@@ -10,7 +10,8 @@ use App\Cate;
 class CateController extends Controller {
 
 	public function getList(){
-		return view('admin.cate.list');
+		$data = Cate::select('id','name','parent_id')->orderBy('id','DESC')->get()->toArray();
+		return view('admin.cate.list',compact('data'));
 	}
 
 	public function getAdd () {
@@ -30,5 +31,18 @@ class CateController extends Controller {
 
 		return redirect()->route('admin.cate.list')->with(['flag_message' => 'Success !! Complete Add Category']);
 	}
+
+	public function getDelete(){
+
+	}
+
+	public function getEdit(){
+		
+	}
+
+	public function postEdit(){
+		
+	}
+
 
 }
