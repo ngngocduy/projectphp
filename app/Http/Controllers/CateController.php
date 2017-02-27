@@ -29,11 +29,25 @@ class CateController extends Controller {
 		$cate->description = $request->txtDescription;
 		$cate->save();
 
-		return redirect()->route('admin.cate.list')->with(['flag_message' => 'Success !! Complete Add Category']);
+		return redirect()->route('admin.cate.list')->with(['flash_level'=>'success','flash_message'=>'Success !! Complete Add Category']);
 	}
 
-	public function getDelete(){
+	public function getDelete($id){
+		$parent = Cate::where('parent_id',$id)->count();
+		if ($parent == 0) {
+			$cate = Cate::find($id);
+			$cate->delete($id);
+			return redirect()->route('admin.cate.list')->with(['flash_level'=>'success','flash_message'=>'Success !! Complate Delete Category']);
+		} else {
+			echo "<script type='text/javascript'>
+				alert('Sorry ! You Can Not Delete This Category');
+				window.location = '";
+					echo route('admin.cate.list');
+			echo"'
+			</script>";
+		}
 
+		
 	}
 
 	public function getEdit(){
