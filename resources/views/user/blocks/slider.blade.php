@@ -1,4 +1,4 @@
-<section class="slider">
+ <section class="slider">
     <div class="container">
       <div class="flexslider" id="mainslider">
         <ul class="slides">

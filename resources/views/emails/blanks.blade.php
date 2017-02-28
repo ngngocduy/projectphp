@@ -1,0 +1,1 @@
+đây là giao diện gửi mail đi {{ $hoten }} va {{ $tinnhan }}

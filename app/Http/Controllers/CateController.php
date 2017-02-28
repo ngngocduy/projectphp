@@ -46,12 +46,13 @@ class CateController extends Controller {
 			echo"'
 			</script>";
 		}
-
 		
 	}
 
-	public function getEdit(){
-		
+	public function getEdit($id){
+		$data = Cate::findOrFail($id)->toArray();
+		$parent = Cate::select('id','name','parent_id')->get()->toArray();
+		return view('admin.cate.edit',compact('parent','data'));
 	}
 
 	public function postEdit(){

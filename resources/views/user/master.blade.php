@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Shop Bán hàng Online</title>
+<title>Khoa Pham Training</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="@yield('description')">
-<meta name="author" content="Ngọc Duy">
+<meta name="author" content="Quoc Tuan">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
 <link href="{!! url('public/user/css/bootstrap.css') !!}" rel="stylesheet">
@@ -27,8 +27,8 @@
 <header>
   @include('user.blocks.header')
   <div class="container">
-@include('user.blocks.nav')
-    
+
+    @include('user.blocks.nav')
   </div>
 </header>
 <!-- Header End -->
@@ -42,73 +42,14 @@
   @include('user.blocks.otherdetail')
   <!-- Section End-->
   
+  
 
   @yield('content')
- 
+
+
 
 <!-- Footer -->
-<footer id="footer">
-  <section class="footersocial">
-    <div class="container">
-      <div class="row">
-        <div class="span3 aboutus">
-          <h2>About Us </h2>
-          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
-            <br>
-            t has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-        </div>
-        <div class="span3 contact">
-          <h2>Contact Us </h2>
-          <ul>
-            <li class="phone"> +123 456 7890, +123 456 7890</li>
-            <li class="mobile"> +123 456 7890, +123 456 78900</li>
-            <li class="email"> test@test.com</li>
-            <li class="email"> test@test.com</li>
-          </ul>
-        </div>
-        <div class="span3 twitter">
-          <h2>Twitter </h2>
-          <div id="twitter">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="footerlinks">
-    <div class="container">
-      <div class="info">
-        <ul>
-          <li><a href="#">Privacy Policy</a>
-          </li>
-          <li><a href="#">Terms &amp; Conditions</a>
-          </li>
-          <li><a href="#">Affiliates</a>
-          </li>
-          <li><a href="#">Newsletter</a>
-          </li>
-        </ul>
-      </div>
-      <div id="footersocial">
-        <a href="#" title="Facebook" class="facebook">Facebook</a>
-        <a href="#" title="Twitter" class="twitter">Twitter</a>
-        <a href="#" title="Linkedin" class="linkedin">Linkedin</a>
-        <a href="#" title="rss" class="rss">rss</a>
-        <a href="#" title="Googleplus" class="googleplus">Googleplus</a>
-        <a href="#" title="Skype" class="skype">Skype</a>
-        <a href="#" title="Flickr" class="flickr">Flickr</a>
-      </div>
-    </div>
-  </section>
-  <section class="copyrightbottom">
-    <div class="container">
-      <div class="row">
-        <div class="span6"> All images are copyright to their owners. </div>
-        <div class="span6 textright"> ShopSimple @ 2012 </div>
-      </div>
-    </div>
-  </section>
-  <a id="gotop" href="http://www.mafiashare.net">Back to top</a>
-</footer>
+  @include('user.blocks.footer')
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -127,5 +68,6 @@
 <script type="text/javascript"  src="{!! url('public/user/js/jquery.touchSwipe.min.js') !!}"></script>
 <script type="text/javascript"  src="{!! url('public/user/js/jquery.ba-throttle-debounce.min.js') !!}"></script>
 <script defer src="{!! url('public/user/js/custom.js') !!}"></script>
+<script src="{!! url('public/user/js/myscript.js') !!}"></script>
 </body>
 </html>
