@@ -42,6 +42,13 @@ class WelcomeController extends Controller {
 		$name_cate = DB::table('cates')->select('name')->where('id',$id)->first();
 		$lasted_product = DB::table('products')->select('id','name','image','price','alias')->orderBy('id','DESC')->take(3)->get();
 		return view('user.pages.cate',compact('product_cate','menu_cate','lasted_product','name_cate'));
+	}
+
+	public function chitietsanpham ($id) {
+		$product_detail = DB::table('products')->where('id',$id)->first();
+		$image = DB::table('product_images')->select('id','image')->where('product_id',$product_detail->id)->get();
+		$product_cate = DB::table('products')->where('cate_id',$product_detail->cate_id)->where('id','<>',$id)->take(4)->get();
+		return view('user.pages.detail',compact('product_detail','image','product_cate'));
 	}	
 
 }
