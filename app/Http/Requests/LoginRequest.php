@@ -22,8 +22,14 @@ class LoginRequest extends Request {
 	public function rules()
 	{
 		return [
-			//
+			'username'	=> 'required',
+			'password' => 'required'
 		];
 	}
-
+	public function messages () {
+		return [
+			'username.required'	=> 'Please Enter Username',
+			'password.required' => 'Please Enter Password'
+		];
+	}
 }
