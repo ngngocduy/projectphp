@@ -19,7 +19,6 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function () {
 	Route::group(['prefix'=>'cate'],function () {
 		Route::get('list',['as'=>'admin.cate.list','uses'=>'CateController@getList']);
@@ -48,4 +47,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function () {
 	});
 });
 
-
+Route::get('insertdata',function () {
+	DB::table('users')->insert(
+			['username'=>'admin','password'=>Hash::make('12345')]
+		);
+});
+Route::get('loai-san-pham/{id}/{tenloai}',['as'=>'loaisanpham','uses'=>'WelcomeController@loaisanpham']);

@@ -8,8 +8,7 @@ class Product extends Model {
 
 	protected $filltable = ['name','alias','price','intro','content','image','keywords','description','user_id','cate_id'];
 
-	public $timestamps = false;
-
+	
 	public function cate(){
 		return $this->belongTo('App\Cate');
 	}
