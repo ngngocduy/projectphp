@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 //use Illuminate\Http\Request;
 use App\Cate;
 use App\Product;
-use App\ProductImages;
+use App\ProductImage;
 use App\Http\Requests\ProductRequest;
 use Input,File;
 use Request;
@@ -41,7 +41,7 @@ class ProductController extends Controller {
 		$product_id = $product->id;
 		if (Input::hasFile('fProductDetail')) {
 			foreach (Input::file('fProductDetail') as $file) {
-				$product_img = new ProductImages();
+				$product_img = new ProductImage();
 				if (isset($file)) {
 					$product_img->image = $file->getClientOriginalName();
 					$product_img->product_id = $product_id;
@@ -95,7 +95,7 @@ class ProductController extends Controller {
 		$product->save();
 		if (!empty(Request::file('fEitDetail'))) {
 			foreach (Request::file('fEitDetail') as $file) {
-				$product_img = new ProductImages();
+				$product_img = new ProductImage();
 				if (isset($file)) {
 					$product_img->image = $file->getClientOriginalName();
 					$product_img->product_id	= $id;
