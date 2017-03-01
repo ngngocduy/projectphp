@@ -42,7 +42,7 @@ class AuthController extends Controller {
 		$login =  array(
 			'username'	=> $request->username,
 			'password'	=> $request->password,
-			'level'		=> 1
+			
 		);
 		if ($this->auth->attempt($login)) {
 			return redirect()->route('admin.cate.list');

@@ -61,7 +61,7 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> </a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> {!! Auth::user()->username !!}</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
@@ -107,14 +107,24 @@
                         <li>
                             <a href="#"><i class="fa fa-cube fa-fw"></i> Product<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                
+                                <li>
+                                    <a href="{{ route('admin.product.list') }}">List Product</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('admin.product.getAdd') }}">Add Product</a>
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                
+                                <li>
+                                    <a href="{{ route('admin.user.list') }}">List User</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('admin.user.getAdd') }}">Add User</a>
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
