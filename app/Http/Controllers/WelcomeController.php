@@ -31,8 +31,9 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		$product = DB::table('products')->select('id','name','image','price','alias')->orderBy('id','DESC')->skip(0)->take(4)->get();
-		return view('user.pages.home',compact('product'));
+		$product = DB::table('products')->select('id','name','image','price','alias')->skip(0)->take(4)->get();
+		$latest_product = DB::table('products')->select('id','name','image','price','alias')->orderBy('id','DESC')->skip(0)->take(4)->get();
+		return view('user.pages.home',compact('product','latest_product'));
 	}
 	public function loaisanpham ($id) {
 		$product_cate = DB::table('products')->select('id','name','image','price','alias','cate_id')->where('cate_id',$id)->paginate(2);

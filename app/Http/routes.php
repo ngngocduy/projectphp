@@ -19,6 +19,11 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('lien-he',function () {
+	echo view('user.pages.contact');
+});
+
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function () {
 	Route::group(['prefix'=>'cate'],function () {
 		Route::get('list',['as'=>'admin.cate.list','uses'=>'CateController@getList']);
@@ -53,3 +58,4 @@ Route::get('insertdata',function () {
 		);
 });
 Route::get('loai-san-pham/{id}/{tenloai}',['as'=>'loaisanpham','uses'=>'WelcomeController@loaisanpham']);
+

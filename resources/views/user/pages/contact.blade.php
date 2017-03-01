@@ -44,9 +44,9 @@
           <aside>
             <div class="sidewidt">
               <h2 class="heading2"><span>Contact Info</span></h2>
-              <p> Lorem Ipsum is simply<br>
-                Lorem Ipsum is simply<br>
-               Lorem Ipsum is simply<br>
+              <p> Nguyễn Ngọc Duy<br>
+                14ck2<br>
+               Trường khoa học tự nhiên<br>
                 <br>
                 Phone: (012) 333-7890<br>
                 Fax: (123) 444-7890<br>
