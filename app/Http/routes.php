@@ -59,4 +59,5 @@ Route::get('insertdata',function () {
 });
 Route::get('loai-san-pham/{id}/{tenloai}',['as'=>'loaisanpham','uses'=>'WelcomeController@loaisanpham']);
 Route::get('chi-tiet-san-pham/{id}/{tenloai}',['as'=>'chitietsanpham','uses'=>'WelcomeController@chitietsanpham']);
+Route::get('lien-he',['as'=>'getLienhe','uses'=>'WelcomeController@get_lienhe']);
 

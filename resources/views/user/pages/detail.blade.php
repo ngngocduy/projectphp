@@ -70,21 +70,17 @@
                   <div class="tab-pane " id="specification">
                     <ul class="productinfo">
                       <li>
-                        <span class="productinfoleft"> Product Code:</span> Product 16 </li>
+                        <span class="productinfoleft"> Product Code:</span> {!! $product_detail->id !!} </li>
                       <li>
-                        <span class="productinfoleft"> Reward Points:</span> 60 </li>
+                        <span class="productinfoleft"> View:</span> {!! $product_detail->view !!} </li>
                       <li>
                         <span class="productinfoleft"> Availability: </span> In Stock </li>
                       <li>
-                        <span class="productinfoleft"> Old Price: </span> $500.00 </li>
+                        <span class="productinfoleft"> Price: </span> {!! $product_detail->price !!} </li>
                       <li>
-                        <span class="productinfoleft"> Ex Tax: </span> $500.00 </li>
+                        <span class="productinfoleft"> Description: </span> {!! $product_detail->description !!} </li>
                       <li>
-                        <span class="productinfoleft"> Ex Tax: </span> $500.00 </li>
-                      <li>
-                        <span class="productinfoleft"> Product Code:</span> Product 16 </li>
-                      <li>
-                        <span class="productinfoleft"> Reward Points:</span> 60 </li>
+                        
                     </ul>
                   </div>
                   <div class="tab-pane" id="review">

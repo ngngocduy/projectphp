@@ -25,7 +25,7 @@ class UserController extends Controller {
 		$user->level = $request->rdoLevel;
 		$user->remember_token = $request->_token;
 		$user->save();
-		return redirect()->route('admin.user.list')->with(['flash_level'=>'success','flash_message'=>'Success !! Complate Add User']);
+		return redirect()->route('admin.user.list')->with(['flash_level'=>'success','flash_message'=>'Success !! Complete Add User']);
 	}
 	public function getDelete ($id) {
 		$user_current_login = Auth::user()->id;
@@ -37,7 +37,7 @@ class UserController extends Controller {
 			return redirect()->route('admin.user.list')->with(['flash_level'=>'danger','flash_message'=>'Sorry !! You Can\'t Access Delete User']);
 		} else {
 			$user->delete($id);
-			return redirect()->route('admin.user.list')->with(['flash_level'=>'success','flash_message'=>'Success !! Complate Delete User']);
+			return redirect()->route('admin.user.list')->with(['flash_level'=>'success','flash_message'=>'Success !! Complete Delete User']);
 		}
 	}
 	public function getEdit ($id) {
