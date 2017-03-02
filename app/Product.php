@@ -6,7 +6,7 @@ class Product extends Model {
 
 	protected $table = 'products';
 
-	protected $filltable = ['name','alias','price','intro','content','image','keywords','description','user_id','cate_id'];
+	protected $filltable = ['name','view','alias','price','intro','content','image','keywords','description','user_id','cate_id'];
 
 	
 	public function cate(){

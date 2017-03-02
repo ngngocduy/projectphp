@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use DB;
+use App\Product;
 
 class WelcomeController extends Controller {
 
@@ -46,8 +47,12 @@ class WelcomeController extends Controller {
 
 	public function chitietsanpham ($id) {
 		$product_detail = DB::table('products')->where('id',$id)->first();
+		$product = Product::find($id);
+		$view = $product_detail->view + 1;
 		$image = DB::table('product_images')->select('id','image')->where('product_id',$product_detail->id)->get();
 		$product_cate = DB::table('products')->where('cate_id',$product_detail->cate_id)->where('id','<>',$id)->take(4)->get();
+		$product->view = $view;
+		$product->save();
 		return view('user.pages.detail',compact('product_detail','image','product_cate'));
 	}	
 
