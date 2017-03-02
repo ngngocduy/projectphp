@@ -7,7 +7,7 @@
     <meta name="description" content="Khóa Học Lập Trình Laravel Framework 5.x Tại Khoa Phạm">
     <meta name="author" content="Vu Quoc Tuan">
 
-    <title>Admin - Khoa Phạm</title>
+    <title>Admin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ url('public/admin/bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">

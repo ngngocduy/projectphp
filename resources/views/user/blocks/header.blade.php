@@ -16,6 +16,15 @@
                   </li>
                   <li><a class="checkout" href="#">CheckOut</a>
                   </li>
+                  <li>
+                  <form class="form-horizontal" action="{!! url('search') !!}"  method="post">
+                  <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
+                      <input type="text" name="search" placeholder="Search..">
+                      <button type="submit" class="btn btn-default">Search</button>                    
+                  
+                    
+                  </form>
+                  </li>
                 </ul>
               </div>
             </div>
